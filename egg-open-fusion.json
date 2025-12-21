@@ -1,0 +1,74 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL",
+    "meta": {
+        "version": "PLCN_v1",
+        "update_url": null
+    },
+    "exported_at": "2025-12-18T03:04:58+00:00",
+    "name": "OpenFusion",
+    "author": "djjoker13@gmail.com",
+    "uuid": "73b02cc1-223c-49d2-8973-626507fb5dcc",
+    "description": "OpenFusion (abbreviated as OF) is an unofficial fan-made open-source reverse-engineered server for the Cartoon Network MMORPG FusionFall.",
+    "tags": [],
+    "features": [],
+    "docker_images": {
+        "FusionFall": "ghcr.io\/evilgenius13\/fusionfall-egg:latest"
+    },
+    "file_denylist": [],
+    "startup": ".\/entrypoint.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\n    \"done\": \"Starting shard server at\"\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "ghcr.io\/pelican-eggs\/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Announce IP",
+            "description": "The IP sent to the client. Set this to your LAN IP (192.168.x.x). If your host is bound to 0.0.0.0 you probably need this.",
+            "env_variable": "ANNOUNCE_IP",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [],
+            "sort": 4
+        },
+        {
+            "name": "Login Port",
+            "description": "Login Server Port",
+            "env_variable": "LOGIN_PORT",
+            "default_value": "23000",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [],
+            "sort": 1
+        },
+        {
+            "name": "Monitor Port",
+            "description": "Admin\/Monitor Port",
+            "env_variable": "MONITOR_PORT",
+            "default_value": "8003",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [],
+            "sort": 3
+        },
+        {
+            "name": "Shard Port",
+            "description": "Game Server Port",
+            "env_variable": "SHARD_PORT",
+            "default_value": "23001",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": [],
+            "sort": 2
+        }
+    ]
+}
